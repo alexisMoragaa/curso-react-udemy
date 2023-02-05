@@ -8,7 +8,7 @@ import Result from './Result'//importa el componente result, el cual mostrara el
 const Calculadora = () => {
     return (
         <main className="react-calculator">
-           <Result num1={12} num2={14}/>
+           <Result vaue={12}/>
            <NumerosCalculadora />
         </main>
     )

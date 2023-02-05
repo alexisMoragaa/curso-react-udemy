@@ -12,13 +12,31 @@ import React from "react";
  * como se muestra en el componente Result
  */
 
-const Result = ({num1, num2}) => {
+import PropTypes from 'prop-types'
+
+const Result = ({value}) => {
     
     return(
         <div className="result">
-            <span>{num1 + num2}</span>
+            <span>{value}</span>
         </div>
     )
+}
+
+/**
+ * Se añaden validaciones mediante el uso de la libreria PropType, la cual nos permite validar
+ * las propiedades que recive nuestro componente y el tipo de las mismas
+ */
+Result.propTypes = {
+    value : PropTypes.number.isRequired,
+}
+
+/**
+ * Se establecen los valores por defecto que tendran las propiedades cuando estos no sean 
+ * no sean declarados al llamar el componente
+ */
+Result.defaultProps = {
+    value: 0,
 }
 
 export default Result
