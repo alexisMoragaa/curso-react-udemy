@@ -4,11 +4,18 @@ import Result from './Result'//importa el componente result, el cual mostrara el
 import Button from './Button'//Importamos el componente de los botones
 
 import '../css/calculadora.css'
+import MathOperations from "./MathOperations";
 
 
 const clickHandlerFucntion = (text) => {
     console.log("El valor recibido desde el componente button es : "+text)
 }
+
+
+const operations = text => console.log("Presiono para ejecutar la operacion : "+text)
+
+const equals = text => console.log("Presiono para ejecutar la operacion : "+text)
+
 
 
 const Calculadora = () => {
@@ -35,13 +42,7 @@ const Calculadora = () => {
                 r
             </button>
         </div>
-           <div className="math-operations">
-            <button id="+"> + </button>
-            <button id="-"> - </button>
-            <button id="*"> * </button>
-            <button id="/"> / </button>
-            <button id="="> = </button>
-        </div>
+        <MathOperations operations={operations} equals={equals}/>
         </main>
     )
 }
