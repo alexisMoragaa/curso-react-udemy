@@ -10,6 +10,7 @@ const clickHandlerFucntion = (text) => {
     console.log("El valor recibido desde el componente button es : "+text)
 }
 
+
 const Calculadora = () => {
     return (
         <main className="react-calculator">
@@ -26,7 +27,21 @@ const Calculadora = () => {
             <Button text={"1"} handler={clickHandlerFucntion}/>
             <Button text={"0"} handler={clickHandlerFucntion}/>
            </div>
-           
+           <div className="functions">
+            <button>
+                clear
+            </button>
+            <button>
+                r
+            </button>
+        </div>
+           <div className="math-operations">
+            <button id="+"> + </button>
+            <button id="-"> - </button>
+            <button id="*"> * </button>
+            <button id="/"> / </button>
+            <button id="="> = </button>
+        </div>
         </main>
     )
 }
