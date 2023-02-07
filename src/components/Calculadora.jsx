@@ -1,7 +1,7 @@
 import React from "react";
-import Button from './Button'//Importamos el componente de los botones
 import Functions from './Functions'//Importa el componente con los botones limpiar y borrar ultimo caracter
 import MathOperations from "./MathOperations";//importa el componente con los botones de operaciones matematicas
+import NumerosCalculadora from './NumerosCalculadora'//Importamos el componente de los botones
 import Result from './Result'//importa el componente result, el cual mostrara el resultado de las operaciones
 
 import '../css/calculadora.css'
@@ -25,18 +25,7 @@ const Calculadora = () => {
         <main className="react-calculator">
             <Result value={12}/>
 
-            <div className="numbers">
-                <Button text={"9"} handler={clickHandlerFucntion}/>
-                <Button text={"8"} handler={clickHandlerFucntion}/>
-                <Button text={"7"} handler={clickHandlerFucntion}/>
-                <Button text={"6"} handler={clickHandlerFucntion}/>
-                <Button text={"5"} handler={clickHandlerFucntion}/>
-                <Button text={"4"} handler={clickHandlerFucntion}/>
-                <Button text={"3"} handler={clickHandlerFucntion}/>
-                <Button text={"2"} handler={clickHandlerFucntion}/>
-                <Button text={"1"} handler={clickHandlerFucntion}/>
-                <Button text={"0"} handler={clickHandlerFucntion}/>
-            </div>
+            <NumerosCalculadora clickHandlerFucntion={clickHandlerFucntion} />
 
             <Functions onContentClear={onContentClear} onDelete={onDelete}/>
 

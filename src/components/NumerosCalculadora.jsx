@@ -1,19 +1,20 @@
 import React from "react";
+import Button from './Button'
 
 
-const NumerosCalculadora = () => {
+const numbers =  [9,8,7,6,5,4,3,2,1,0]
+
+const renderButton = clickHandlerFucntion => {
+  return numbers.map( (num) =>  <Button text={num.toString()} handler={clickHandlerFucntion } key={num} /> )
+    
+}
+
+
+const NumerosCalculadora = ({clickHandlerFucntion}) => {
+    
     return(
-        <div className="numbers">
-            <button>9</button>
-            <button>8</button>
-            <button>7</button>
-            <button>6</button>
-            <button>5</button>
-            <button>4</button>
-            <button>3</button>
-            <button>2</button>
-            <button>1</button>
-            <button>0</button>
+        <div className="numbers">           
+            {renderButton(clickHandlerFucntion)}
         </div>
     )
 }
