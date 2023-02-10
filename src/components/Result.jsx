@@ -28,7 +28,7 @@ const Result = ({value}) => {
  * las propiedades que recive nuestro componente y el tipo de las mismas
  */
 Result.propTypes = {
-    value : PropTypes.number.isRequired,
+    value : PropTypes.string.isRequired,
 }
 
 /**
