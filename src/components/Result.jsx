@@ -18,7 +18,7 @@ const Result = ({value}) => {
     
     return(
         <div className="result">
-            <span>{value} Prueba </span>
+            <span>{value}</span>
         </div>
     )
 }
