@@ -6,12 +6,16 @@ import reportWebVitals from './reportWebVitals';
 
 
 import Calculadora from './components/Calculadora'
+import ClimaApp from './components/CityInfo/ClimaApp'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+
+    <ClimaApp city={'Alguna'} country={'De algun lugar'}/>
    
     <Calculadora />
+    
   </React.StrictMode>
 );
 
