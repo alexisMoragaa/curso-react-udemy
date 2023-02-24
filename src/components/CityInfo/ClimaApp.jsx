@@ -5,8 +5,8 @@ import Typography from '@mui/material/Typography';
 const ClimaApp = ({city, country}) => {
   return (
     <div>
-        <Typography variant="h4">{city}</Typography>
-        <Typography variant="h5">{country}</Typography>
+        <Typography variant="h4" display="inline">{city}, </Typography>
+        <Typography variant="h5" display="inline">{country}</Typography>
     </div>
   )
 }
