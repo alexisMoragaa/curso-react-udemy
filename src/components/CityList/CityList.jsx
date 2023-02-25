@@ -5,12 +5,12 @@ import Weather from '../Weather/Weather'
 import { Grid } from '@mui/material'
 
 
-const renderClimaApp = (data) => {
+const renderClimaApp = (eventOnClickCity) => (data) => {
     
     const { city, country, temperature, state} = data
 
     return(
-        <li key={city}>
+        <li key={city} onClick={eventOnClickCity}>
             <Grid container>
                 <Grid item
                     md={4}
@@ -31,18 +31,19 @@ const renderClimaApp = (data) => {
     ) 
 }
 
-const CityList = ({cities}) => {
+const CityList = ({cities, onClickCity}) => {
   return (
     <ul >
         {
-            cities.map( datos => renderClimaApp(datos) )
+            cities.map( datos => renderClimaApp(onClickCity)(datos) )
         }
     </ul>
   )
 }
 
 CityList.propTypes = {
-    cities : PropTypes.array.isRequired
+    cities : PropTypes.array.isRequired,
+    onClickCity: PropTypes.func.isRequired
 }
 
 export default CityList

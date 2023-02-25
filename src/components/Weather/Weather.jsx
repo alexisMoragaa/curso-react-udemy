@@ -5,6 +5,7 @@ import { WiCloud, WiDayCloudy, WiDayFog, WiDaySunny, WiRain } from 'react-icons/
 import { IconContext } from 'react-icons'
 
 
+const validState = [  'cloud',  'cloudy',  'fog',  'sunny',  'rain',]
 
 
 const statateByName = {
@@ -18,8 +19,7 @@ const statateByName = {
 
 
 const renderSate = (state) => {
-
-  let Icon = statateByName[state] === undefined ?   statateByName["sunny"] : statateByName[state]
+  let Icon = statateByName[state] === undefined ? statateByName["sunny"] : statateByName[state]
   return < Icon />
 }
 
@@ -27,18 +27,17 @@ const Weather = ({ temperature, state }) => {
   return (
     <div>
       <IconContext.Provider value={{size:'4em'}}>
-
-       {renderSate(state)}
+        {renderSate(state)}
       </IconContext.Provider>
 
-        <Typography display="inline" variant='h3'>{temperature}</Typography>
+      <Typography display="inline" variant='h3'>{temperature}</Typography>
     </div>
   )
 }
 
 Weather.propTypes = {
     temperature : PropTypes.number.isRequired,
-    state: PropTypes.string.isRequired
+    state: PropTypes.oneOf(validState).isRequired
 }
 
 export default Weather
