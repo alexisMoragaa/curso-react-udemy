@@ -4,17 +4,15 @@ import './index.css';
 import './css/style.css';
 import reportWebVitals from './reportWebVitals';
 
-
+import App from './App';
 import Calculadora from './components/Calculadora'
 import ClimaApp from './components/CityInfo/ClimaApp'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
+    <App />
     <ClimaApp city={'Alguna'} country={'De algun lugar'}/>
-   
-    <Calculadora />
     
   </React.StrictMode>
 );
