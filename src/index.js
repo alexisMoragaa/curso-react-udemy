@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <ClimaApp city={'Alguna'} country={'De algun lugar'}/>
+   
     
   </React.StrictMode>
 );
