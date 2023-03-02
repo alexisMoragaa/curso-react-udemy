@@ -19,7 +19,7 @@ test("City List Render", async () => {
 
     const { findAllByRole } = render (<CityList cities={ejemplo} />)
 
-    const CityListComponent = await findAllByRole("listitem")
+    const CityListComponent = await findAllByRole("button")
 
     expect(CityListComponent).toHaveLength(4)
 
@@ -32,7 +32,7 @@ test('Click on CityList', async() => {
 
     const { findAllByRole } = render (<CityList cities={ejemplo} onClickCity={fnClickOnItem}/>)
 
-    const items = await findAllByRole("listitem")
+    const items = await findAllByRole("button")
 
     fireEvent.click(items[0])
 

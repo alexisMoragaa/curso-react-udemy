@@ -16,13 +16,23 @@ const App = props => {
                 <Router>
 
                     <div> {/* Establece los links como barra de navegacion*/} 
-                        <Link to="/">Home</Link>
-                        <Link to="/calculadora">Calculadora</Link>
+                        <li>
+                            <Link to="/calculadora">Calculadora</Link>
+                        </li>
+
+                        <li>
+                            <Link to="/">CityList</Link>
+                        </li>
+
+                        <li>
+                            <Link to="/city">City</Link>
+                        </li>
+
                     </div>
 
                     <Routes> {/* Renderiza los componentes correspondientes cuando la ruta se coincide con la indicada en el path */}
                         <Route path='/' element={<WelcomePage />}/>
-                        <Route path='/cities' element={ <CityPage />}/>
+                        <Route path='/city' element={ <CityPage />}/>
                         <Route path='/calculadora'element={<CalculadoraPage />}/>
                         <Route path='*' element={<NotFoundPages />}/>
                     </Routes>

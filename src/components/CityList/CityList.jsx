@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ClimaApp from '../CityInfo/ClimaApp'
 import Weather from './../Weather'
-import { Grid } from '@mui/material'
+import { Grid, List, ListItem } from '@mui/material'
 
 
 const renderClimaApp = (eventOnClickCity) => (data) => {
@@ -10,8 +10,8 @@ const renderClimaApp = (eventOnClickCity) => (data) => {
     const { city, country, temperature, state} = data
 
     return(
-        <li key={city} onClick={eventOnClickCity}>
-            <Grid container>
+        <ListItem button key={city} onClick={eventOnClickCity}>
+            <Grid container justifyContent="center" alignItems="center">
                 <Grid item
                     md={4}
                     xs={12}>
@@ -26,7 +26,7 @@ const renderClimaApp = (eventOnClickCity) => (data) => {
                 </Grid>
 
             </Grid>
-        </li>
+        </ListItem>
 
     ) 
 }

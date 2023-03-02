@@ -19,7 +19,7 @@ export const WelcomePage = () => {
   const history = useNavigate ()
 
   const onclickHandler = () => {
-    history('/cities')
+    history('/city')
   }
   
 
