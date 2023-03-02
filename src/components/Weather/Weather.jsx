@@ -7,7 +7,7 @@ import {Grid} from '@mui/material'
 
 const Weather = ({ temperature, state }) => {
   return (
-    <Grid container  alignItems="center" >
+    <Grid container  item justifyContent="center" alignItems="center" spacing="1">
       <IconContext.Provider value={{size:'6em'}}>
         <IconState state={state}/>
       </IconContext.Provider>

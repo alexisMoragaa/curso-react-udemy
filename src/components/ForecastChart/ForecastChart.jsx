@@ -7,11 +7,11 @@ import { AreaChart, Area, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip,
 const ForecastChart = ( { data } ) => {
   return (
     <Grid container>
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer width="95%" height={300}>
             <AreaChart 
             height={250}
             // width={1300}
-            margin={{top:20, bottom:20, left:-20, right:25}}
+            margin={{top:20, bottom:20, left:5, right:5}}
             data={data}
             >
                 <XAxis dataKey="dayHour"></XAxis>

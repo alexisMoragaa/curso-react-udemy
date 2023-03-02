@@ -70,20 +70,19 @@ const forecastItemList = [
 
 
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center" alignItems="flex-end"  xs={12} sm={11} md={10} lg={9}>
 
-        <Grid item sm={12}> 
+        <Grid container justifyContent="center" item sm={12}> 
             <CityInfo city={city} country={country} /> 
         </Grid>
 
-        <Grid container xs={12} justifyContent="center" alignItems="center">
+        <Grid item container xs={12} justifyContent="center" alignItems="center">
 
-            <Grid  item sm={8} >
+ 
                 <Weather temperature={temperature} state={state} />
-            </Grid>
-            <Grid item sm={4} >
+   
                 <WeatherDetails humidity={humidity} wind={wind} />
-            </Grid>
+          
 
         </Grid>
 
