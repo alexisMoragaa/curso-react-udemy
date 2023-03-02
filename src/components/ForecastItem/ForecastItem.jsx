@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons'
 const ForecastItem = ({ weekDay, hour, state, temperature }) => {
   return (
 
-    <Grid container direction="column" justify="center" alignItems="center">
+    <Grid container direction="column" justify="center" alignItems="center" width={120}>
         <Grid item >
             <Typography>{weekDay}</Typography>
         </Grid>

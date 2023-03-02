@@ -4,6 +4,9 @@ import { Grid } from '@mui/material'
 import { CalculadoraPage } from './pages/CalculadoraPage'
 import { NotFoundPages } from './pages/NotFoundPages'
 import { WelcomePage } from './pages/WelcomePage'
+import { CityPage } from './pages/CityPage'
+
+
 const App = props => {
   return (
 
@@ -19,7 +22,7 @@ const App = props => {
 
                     <Routes> {/* Renderiza los componentes correspondientes cuando la ruta se coincide con la indicada en el path */}
                         <Route path='/' element={<WelcomePage />}/>
-                        <Route path='/cities' element={"Main"}/>
+                        <Route path='/cities' element={ <CityPage />}/>
                         <Route path='/calculadora'element={<CalculadoraPage />}/>
                         <Route path='*' element={<NotFoundPages />}/>
                     </Routes>

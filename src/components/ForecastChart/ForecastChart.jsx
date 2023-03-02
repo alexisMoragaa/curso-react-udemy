@@ -2,25 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Grid } from '@mui/material'
 
-import { AreaChart, Area, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend  } from 'recharts'
+import { AreaChart, Area, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
 const ForecastChart = ( { data } ) => {
   return (
     <Grid container>
-        <AreaChart 
-        height={250}
-        width={700}
-        margin={{top:20, bottom:20, left:5, right:20}}
-        data={data}
-        >
-            <XAxis dataKey="dayHour"></XAxis>
-            <YAxis></YAxis>
-            <Tooltip></Tooltip>
-            <Legend></Legend>
-            {/* <CartesianGrid></CartesianGrid> */}
-            <Area type="monotone" stroke='#FF0000' dataKey="max" fill="#FF0000"></Area>
-            <Area type="monotone" stroke='#0000FF' dataKey="min" fill="#0000FF"></Area>
-        </AreaChart>
+        <ResponsiveContainer width="100%" height={300}>
+            <AreaChart 
+            height={250}
+            // width={1300}
+            margin={{top:20, bottom:20, left:-20, right:25}}
+            data={data}
+            >
+                <XAxis dataKey="dayHour"></XAxis>
+                <YAxis></YAxis>
+                <Tooltip></Tooltip>
+                <Legend></Legend>
+                {/* <CartesianGrid></CartesianGrid> */}
+                <Area type="monotone" stroke='#FF0000' dataKey="max" fill="#FF0000"></Area>
+                <Area type="monotone" stroke='#0000FF' dataKey="min" fill="#0000FF"></Area>
+            </AreaChart>
+        </ResponsiveContainer>
     </Grid>
     
   )
