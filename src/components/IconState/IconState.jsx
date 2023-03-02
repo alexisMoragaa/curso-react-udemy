@@ -27,5 +27,5 @@ const IconState = ({ state }) => {
 IconState.propTypes = {
     state: PropTypes.oneOf(validState).isRequired,
 }
-
+export  { validState }
 export default  IconState 

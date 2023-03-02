@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ClimaApp from '../CityInfo/ClimaApp'
-import Weather from '../Weather/Weather'
+import Weather from './../Weather'
 import { Grid } from '@mui/material'
 
 

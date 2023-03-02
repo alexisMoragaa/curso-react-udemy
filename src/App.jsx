@@ -15,7 +15,7 @@ const App = props => {
 
             <Routes> {/* Renderiza los componentes correspondientes cuando la ruta se coincide con la indicada en el path */}
                 <Route path='/' element={<WelcomePage />}/>
-                <Route path='/main' element={"Main"}/>
+                <Route path='/cities' element={"Main"}/>
                 <Route path='/calculadora'element={<CalculadoraPage />}/>
                 <Route path='*' element={<NotFoundPages />}/>
             </Routes>
